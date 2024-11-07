@@ -7,9 +7,9 @@ input_dir = './HDFS_v1/'
 output_dir = './result/test' 
 log_file = 'test.log' 
 
-log_format = '<Timestamp> <Thread_ID> <Level> <Logger> <Content>'
+log_format = '<date> <Timestamp> <Thread_ID> <Level> <Logger>: <Content>'
 regex = [
-    r'((\d{1,3}\.){3}\d{1,3})',  # IP
+    r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)', # IP
     r'blk_-?\d+',  # Identifiant de bloc
     r'src:.*?dest:'  # En-têtes source et destination
 ]
