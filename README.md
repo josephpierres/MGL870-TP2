@@ -2,11 +2,11 @@
 Utilisation de l’apprentissage machine pour la détection des anomalies
 ## apres avoir installer python, installer l'enviromment virtuel
 pip install virtualenv
-python.exe -m pip install --upgrade pip
-python -m venv .venv
+python3 -m pip install --upgrade pip
+python3 -m venv .venv
 
 ## pour activer l'environnement de python
-.\.venv\Scripts\activate
+source .venv/bin/activate
 
 ## installation du log parser
 pip install logparser3
