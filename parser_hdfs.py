@@ -2,7 +2,6 @@
 
 from logparser.Drain import LogParser
 
-
 input_dir = './HDFS_v1/'  
 output_dir = './result' 
 log_file = 'train.log' 

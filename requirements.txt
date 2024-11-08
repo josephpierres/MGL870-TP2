@@ -9,3 +9,8 @@ nltk
 deap
 openai
 tiktoken
+# ipykernel
+# matplotlib
+# requests
+# torch
+
