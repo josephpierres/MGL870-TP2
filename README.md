@@ -1,4 +1,11 @@
 # MGL870-TP2
+1. Take HDFS raw log dataset as an example, I first need to transform it into a structured log dataset using the LogParser. And I will ended up getting this two files _structured.csv and _template.csv
+2. And to get the training data and test data that look like the hdfs_train, hdfs_test_normal and hdfs_test_abnormal from the structured log dataset that I got from step 1, I will need to first do the sampling to generate the sequence of number as you stated in the example of how to sample your own log. Then after having the event sequences, I will need to do the train test split mannually to get the three datsasets that listed above.
+3. After having the datasets, we can perform the model (e.g. deeplog.py) training on the hdfs_train file that uses the sliding window sampling methods to generate sequence vector, count vector and semantic vector to train the deep learning model. And we can choose our own combination of the feature vectors that we wanna use.
+4. Lastly, use the saved model to do inference on the test dataset.
+
+https://github.com/d0ng1ee/logdeep/issues/3
+
 Utilisation de l’apprentissage machine pour la détection des anomalies
 ## apres avoir installer python, installer l'enviromment virtuel
 pip install virtualenv
