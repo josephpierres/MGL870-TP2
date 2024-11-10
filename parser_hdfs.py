@@ -1,17 +1,19 @@
 #!/usr/bin/env python
 
 from logparser.Drain import LogParser
+import re
 
 input_dir = './HDFS_v1/'  
 output_dir = './result' 
-log_file = 'train.log' 
+log_file = 'HDFS.log' 
 
-log_format = '<date> <Timestamp> <Thread_ID> <Level> <Logger>: <Content>'
-regex = [
+log_format = '<date> <Time> <Pid> <Level> <Component>: <Content>'
+regex      = [
+    r'blk_(|-)[0-9]+' , # block id
     r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)', # IP
-    r'blk_-?\d+',  # Identifiant de bloc
-    r'src:.*?dest:'  # En-têtes source et destination
+    r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$', # Numbers
 ]
+
 st = 0.5 
 depth = 4  
 

@@ -38,17 +38,3 @@ occurrence_matrix.to_csv(output_path, index=True)
 print(f'Matrice des occurrences générée et sauvegardée dans {output_path}')
 
 
-
-
-# # Création d'une matrice d'occurrence avec 'LineId' comme index et 'EventId' comme colonnes
-# occurrence_matrix = pd.DataFrame(0, index=log_structured['LineId'], columns=event_ids_sorted)
-
-# # Remplissage de la matrice en fonction des occurrences des événements
-# for _, row in log_structured.iterrows():
-#     occurrence_matrix.at[row['LineId'], row['EventId']] = 1
-
-# # Affichage de la matrice pour vérification
-# print(occurrence_matrix.head())
-
-# # Sauvegarde de la matrice dans un fichier CSV
-# occurrence_matrix.to_csv('train.occurrence_matrix.csv', index=True)

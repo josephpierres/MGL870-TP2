@@ -5,3 +5,4 @@ Openstack/*
 HDFS_v1/*
 BGL/*
 result/*
+structure_bgl.py

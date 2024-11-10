@@ -5,9 +5,17 @@ import numpy as np
 import argparse
 from tqdm import tqdm
 
+
+tqdm.pandas()
+pd.options.mode.chained_assignment = None
+
 # Chemin du répertoire contenant les fichiers CSV
 csv_directory = './result'
 output_dir = "./BGL/output/"
+# data_dir = os.path.expanduser("~/.dataset/bgl")
+data_dir = './BGL/'  
+log_file = "BGL.log"
+
 # Chargement des fichiers CSV
 log_structured_path = os.path.join(csv_directory, 'BGL.log_structured.csv')
 log_templates_path = os.path.join(csv_directory, 'BGL.log_templates.csv')
@@ -80,21 +88,12 @@ def sliding_window(raw_data, para):
     print('there are %d instances (sliding windows) in this dataset\n' % len(start_end_index_pair))
     return pd.DataFrame(new_data, columns=raw_data.columns)
 
-
-
-
-
-
-
-
 def deeplog_file_generator(filename, df, features):
     with open(filename, 'w') as f:
         for _, row in df.iterrows():
             for val in zip(*row[features]):
                 f.write(','.join([str(v) for v in val]) + ' ')
             f.write('\n')
-
-
 
 # In the first column of the log, "-" indicates non-alert messages while others are alert messages.
 def count_anomaly():
@@ -118,7 +117,7 @@ if __name__ == "__main__":
     #########
     # Count #
     #########
-    # count_anomaly()
+    count_anomaly()
 
     ##################
     # Transformation #

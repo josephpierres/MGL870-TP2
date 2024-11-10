@@ -6,7 +6,8 @@ input_dir = './BGL/'
 output_dir = './result' 
 log_file = 'BGL.log' 
 
-log_format = '<Label> <Id> <Date> <Code1> <Time> <Code2> <Component1> <Component2> <Level> <Content>'
+log_format = "<Label> <Timestamp> <Date> <Node> <Time> <NodeRepeat> <Type> <Component> <Level> <Content>"
+# regex = [r"core\.\d+"]
 regex = [
         r'(0x)[0-9a-fA-F]+', #hexadecimal
         r'\d+.\d+.\d+.\d+',
