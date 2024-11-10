@@ -9,8 +9,6 @@ log_file = 'HDFS.log'
 
 log_format = '<date> <Time> <Pid> <Level> <Component>: <Content>'
 regex      = [
-    # "(/[-\w]+)+", #replace file path with *
-    # "(?<=blk_)[-\d]+", #replace block_id with *
     r'blk_(|-)[0-9]+' , # block id
     r'(/|)([0-9]+\.){3}[0-9]+(:[0-9]+|)(:|)', # IP
     r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$', # Numbers

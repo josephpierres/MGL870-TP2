@@ -16,10 +16,10 @@ output_dir = './HDFS_v1/output/'  # The output directory of parsing results
 log_file   = "HDFS.log"  # The input log file name
 csv_directory = './result'
 
-log_structured_file = os.path.join(csv_directory, 'HDFS.log_structured.csv')
+log_structured_file = os.path.join(csv_directory, 'HDFS.log_structured_blk.csv')
 log_templates_file = os.path.join(csv_directory, 'HDFS.log_templates.csv')
 log_sequence_file = os.path.join(csv_directory, 'HDFS_sequence.csv')
-
+blk_label_file = os.path.join(input_dir, "preprocessed/anomaly_label.csv")
 def mapping():
     log_temp = pd.read_csv(log_templates_file)
     log_temp.sort_values(by = ["Occurrences"], ascending=False, inplace=True)
@@ -55,7 +55,7 @@ def hdfs_sampling(log_file, window='session'):
 
 def generate_train_test(hdfs_sequence_file, n=None, ratio=0.3):
     blk_label_dict = {}
-    blk_label_file = os.path.join(input_dir, "anomaly_label.csv")
+   
     blk_df = pd.read_csv(blk_label_file)
     for _ , row in tqdm(blk_df.iterrows()):
         blk_label_dict[row["BlockId"]] = 1 if row["Label"] == "Anomaly" else 0
