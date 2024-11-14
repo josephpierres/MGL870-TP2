@@ -6,3 +6,8 @@ HDFS_v1/*
 BGL/*
 result/*
 structure_bgl.py
+BGL_structure.py
+BGL_event_occurence_matrix.py
+BGL_event_occurence_matrix.py
+BGL_event_occurence_matrix.py
+structure_blk.py

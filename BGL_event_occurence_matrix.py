@@ -17,7 +17,7 @@ data_dir = './BGL/'
 log_file = "BGL.log"
 
 # Chargement des fichiers CSV
-log_structured_path = os.path.join(csv_directory, 'BGL.log_structured.csv')
+log_structured_path = os.path.join(csv_directory, 'BGL.log_structured_blk.csv')
 log_templates_path = os.path.join(csv_directory, 'BGL.log_templates.csv')
 
 
@@ -125,7 +125,7 @@ if __name__ == "__main__":
     # mins
     window_size = 5
     step_size = 1
-    train_ratio = 0.4
+    train_ratio = 0.8
 
 
     # data preprocess
@@ -146,11 +146,11 @@ if __name__ == "__main__":
     df_normal =deeplog_df[deeplog_df["Label"] == 0]
     df_normal = df_normal.sample(frac=1, random_state=12).reset_index(drop=True) #shuffle
     normal_len = len(df_normal)
-    train_len = int(normal_len * train_ratio)
+    train_len = int(normal_len * train_ratio) ## pas de ratio, je dois changer 
 
     train = df_normal[:train_len]
     # deeplog_file_generator(os.path.join(output_dir,'train'), train, ["EventId", "deltaT"])
-    deeplog_file_generator(os.path.join(output_dir,'train'), train, ["EventId"])
+    deeplog_file_generator(os.path.join(output_dir,'train.csv'), train, ["EventId"])
 
     print("training size {}".format(train_len))
 
@@ -158,7 +158,7 @@ if __name__ == "__main__":
     # Test Normal #
     ###############
     test_normal = df_normal[train_len:]
-    deeplog_file_generator(os.path.join(output_dir, 'test_normal'), test_normal, ["EventId"])
+    deeplog_file_generator(os.path.join(output_dir, 'test_normal.csv'), test_normal, ["EventId"])
     print("test normal size {}".format(normal_len - train_len))
 
     del df_normal
@@ -171,5 +171,5 @@ if __name__ == "__main__":
     #################
     df_abnormal = deeplog_df[deeplog_df["Label"] == 1]
     #df_abnormal["EventId"] = df_abnormal["EventId"].progress_apply(lambda e: event_index_map[e] if event_index_map.get(e) else UNK)
-    deeplog_file_generator(os.path.join(output_dir,'test_abnormal'), df_abnormal, ["EventId"])
+    deeplog_file_generator(os.path.join(output_dir,'test_abnormal.csv'), df_abnormal, ["EventId"])
     print('test abnormal size {}'.format(len(df_abnormal)))
