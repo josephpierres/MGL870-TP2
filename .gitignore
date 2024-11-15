@@ -5,7 +5,9 @@ Openstack/*
 HDFS_v1/*
 BGL/*
 Code_py
+input/*
 result/*
+output/*
 structure_bgl.py
 BGL_structure.py
 BGL_event_occurence_matrix.py
