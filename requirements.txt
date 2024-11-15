@@ -8,3 +8,6 @@ nltk
 deap
 openai
 tiktoken
+jupyter 
+logparser3 
+drain3
