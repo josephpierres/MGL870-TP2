@@ -2,8 +2,8 @@
 venv/*
 Hadoop/*
 Openstack/*
-#HDFS_v1/*
-#BGL/*
+HDFS_v1/*
+BGL/*
 Code_py
 result/*
 structure_bgl.py
