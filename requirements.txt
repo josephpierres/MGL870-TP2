@@ -1,0 +1,13 @@
+regex==2022.3.2
+numpy
+pandas
+scipy
+scikit-learn
+tqdm
+nltk
+deap
+openai
+tiktoken
+jupyter 
+logparser3 
+drain3
