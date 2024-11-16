@@ -11,3 +11,5 @@ tiktoken
 jupyter 
 logparser3 
 drain3
+matplotlib
+seaborn
