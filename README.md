@@ -9,10 +9,21 @@ pip install requirements.txt
 ```
 
 # Download logfiles
-The following code will automatically download the log files from https://github.com/logpai/loghub and will set up the folder structure.
+The following code will automatically download the **HDFS_v1** and **BGL** zip log files from https://github.com/logpai/loghub.
 ```bash
 python download_logfiles.py
 ```
+Moreoever, it prepares the folder structure as :
+```bash
+.
+├── input
+│   ├── HDFS_v1
+│   └── BGL
+├── HDFS_results
+└── BGL_results
+```
+The zip log files will be downloaded and unzipped in `input/HDFS_v1` and `input/BGL` respectively.
+
 
 # HDFS_v1
 + `MGL870-TP2-HDFS.ipynb`
