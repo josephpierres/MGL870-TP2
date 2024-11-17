@@ -24,6 +24,8 @@ Moreoever, it prepares the folder structure as :
 ```
 The zip log files will be downloaded and unzipped in `input/HDFS_v1` and `input/BGL` respectively.
 
+The results for the following Jupyter Notebook are going to be in `HDFS_results` and `BGL_results`.
+
 
 # HDFS_v1
 + `MGL870-TP2-HDFS.ipynb`
