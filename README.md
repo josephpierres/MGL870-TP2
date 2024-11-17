@@ -18,10 +18,11 @@ python download_logfiles.py
 + `MGL870-TP2-HDFS.ipynb`
 + `MGL870-TP2-HDFS-AIOps.ipynb`
 
+
 # BGL
 + `MGL870-TP2-BGL.ipynb`
 + `MGL870-TP2-BGL-AIOps.ipynb`
-+ 
+  
 
 # References
 + Adam J. Oliner, Jon Stearley. [What Supercomputers Say: A Study of Five System Logs](https://ieeexplore.ieee.org/document/4273008), in Proc. of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), 2007.
