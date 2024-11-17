@@ -14,6 +14,15 @@ The following code will automatically download the log files from https://github
 python download_logfiles.py
 ```
 
+# HDFS_v1
++ `MGL870-TP2-HDFS.ipynb`
++ `MGL870-TP2-HDFS-AIOps.ipynb`
+
+# BGL
++ `MGL870-TP2-BGL.ipynb`
++ `MGL870-TP2-BGL-AIOps.ipynb`
++ 
+
 # References
 + Adam J. Oliner, Jon Stearley. [What Supercomputers Say: A Study of Five System Logs](https://ieeexplore.ieee.org/document/4273008), in Proc. of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), 2007.
 + Jieming Zhu, Shilin He, Pinjia He, Jinyang Liu, Michael R. Lyu. [Loghub: A Large Collection of System Log Datasets for AI-driven Log Analytics](https://arxiv.org/abs/2008.06448). IEEE International Symposium on Software Reliability Engineering (ISSRE), 2023.
