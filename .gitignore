@@ -8,6 +8,8 @@ Code_py
 input/*
 result/*
 output/*
+HDFS_results/*
+BGL_results/*
 structure_bgl.py
 BGL_structure.py
 BGL_event_occurence_matrix.py
