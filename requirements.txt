@@ -13,3 +13,5 @@ logparser3
 drain3
 matplotlib
 seaborn
+levenshtein
+pylcs
