@@ -8,6 +8,7 @@ Code_py
 input/*
 result/*
 output/*
+Archives/*
 HDFS_results/*
 BGL_results/*
 structure_bgl.py
