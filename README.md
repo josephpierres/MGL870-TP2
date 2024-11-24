@@ -28,12 +28,12 @@ The results for the following Jupyter Notebook are going to be in `HDFS_results`
 
 
 # HDFS_v1
-+ `MGL870-TP2-HDFS.ipynb`
++ `MGL870-TP2-HDFS-Parsing.ipynb`
 + `MGL870-TP2-HDFS-AIOps.ipynb`
 
 
 # BGL
-+ `MGL870-TP2-BGL.ipynb`
++ `MGL870-TP2-BGL-Parsing.ipynb`
 + `MGL870-TP2-BGL-AIOps.ipynb`
   
 
